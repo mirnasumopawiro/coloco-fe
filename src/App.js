@@ -1,37 +1,52 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import './scss/style.scss';
-
-const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse"></div>
-  </div>
-)
-
-// Containers
-const TheLayout = React.lazy(() => import('./containers/TheLayout'));
-
-// Pages
-const Login = React.lazy(() => import('./views/pages/login/Login'));
-const Register = React.lazy(() => import('./views/pages/register/Register'));
-const Page404 = React.lazy(() => import('./views/pages/page404/Page404'));
-const Page500 = React.lazy(() => import('./views/pages/page500/Page500'));
-
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { DefaultLayout } from "./containers";
+import { Login, Page404 } from "./pages";
+import "flag-icon-css/css/flag-icon.min.css";
+import "font-awesome/css/font-awesome.min.css";
+import "react-toastify/dist/ReactToastify.css";
+import "simple-line-icons/css/simple-line-icons.css";
+import "./scss/style.scss";
 class App extends Component {
-
   render() {
     return (
-      <HashRouter>
-          <React.Suspense fallback={loading}>
-            <Switch>
-              <Route exact path="/login" name="Login Page" render={props => <Login {...props}/>} />
-              <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />
-              <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
-              <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
-              <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
-            </Switch>
-          </React.Suspense>
-      </HashRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Login} exact />
+          <Route path="/login" component={Login} exact />
+          <Route path="/dashboard" name="Dashboard" component={DefaultLayout} />
+          <Route
+            path="/attendance"
+            name="Attendance"
+            component={DefaultLayout}
+          />
+          <Route
+            path="/payroll-info"
+            name="Payroll Info"
+            component={DefaultLayout}
+          />
+          <Route path="/payslip" name="Payslip" component={DefaultLayout} />
+          <Route path="/profile" name="Profile" component={DefaultLayout} />
+          <Route
+            path="/employee-directory"
+            name="Employee Directory"
+            component={DefaultLayout}
+          />
+          <Route
+            path="/change-password"
+            name="Change Password"
+            component={DefaultLayout}
+          />
+          <Route
+            path="/reimbursement"
+            name="Reimbursement"
+            component={DefaultLayout}
+          />
+          <Route path="/ticket" name="Ticket" component={DefaultLayout} />
+          <Route path="/log-out" component={Login} />
+          <Route component={Page404} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

@@ -1,11 +1,44 @@
-// If you want to override variables do it here
 @import "variables";
-
-// Import CoreUI styles
 @import "~@coreui/coreui/scss/coreui.scss";
-
-// Some temp fixes
 @import "fixes";
-
-// If you want to add something do it here
 @import "custom";
+
+.c-sidebar {
+  background: #456268;
+}
+
+:root {
+  --primary: #456268;
+}
+
+.btn-primary {
+  background-color: #456268;
+}
+
+.c-sidebar-nav-item:hover,
+.c-sidebar-nav-link:hover {
+  background: #79a3b1 !important;
+}
+
+.btn:hover {
+  background: #79a3b1 !important;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

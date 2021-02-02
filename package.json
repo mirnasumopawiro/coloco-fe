@@ -1,27 +1,7 @@
 {
-  "name": "@coreui/coreui-free-react-admin-template",
-  "version": "3.2.0",
-  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
-  "author": {
-    "name": "CoreUI",
-    "url": "https://coreui.io",
-    "github": "https://github.com/coreui",
-    "twitter": "https://twitter.com/core_ui"
-  },
-  "contributors": [
-    {
-      "name": "CoreUI Team",
-      "url": "https://github.com/orgs/coreui/people"
-    }
-  ],
-  "homepage": ".",
-  "copyright": "Copyright 2017-2020 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
+  "name": "coloco-fe",
+  "version": "0.1.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
-  },
   "dependencies": {
     "@coreui/chartjs": "^2.0.0",
     "@coreui/coreui": "^3.4.0",
@@ -30,18 +10,38 @@
     "@coreui/react": "^3.4.0",
     "@coreui/react-chartjs": "^1.0.1",
     "@coreui/utils": "^1.3.1",
+    "@react-pdf/renderer": "^1.6.12",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.2",
     "classnames": "^2.2.6",
     "core-js": "^3.8.1",
     "enzyme": "^3.11.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.2",
+    "firebase": "^8.2.5",
+    "flag-icon-css": "^3.5.0",
+    "font-awesome": "^4.7.0",
+    "html-react-parser": "^1.1.1",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.1.0",
+    "react-loadable": "^5.5.0",
+    "react-loader-spinner": "^3.1.14",
+    "react-number-format": "^4.4.4",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
-    "redux": "4.0.5"
+    "react-router-redux": "^4.0.8",
+    "react-table": "^7.6.2",
+    "react-to-pdf": "0.0.13",
+    "react-toastify": "^6.2.0",
+    "reactstrap": "^8.8.1",
+    "redux": "4.0.5",
+    "redux-thunk": "^2.3.0",
+    "simple-line-icons": "^2.5.5",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "auto-changelog": "~2.2.1",

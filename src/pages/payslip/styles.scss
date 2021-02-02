@@ -1,0 +1,23 @@
+.payslip {
+  .card {
+    .card-body {
+      .basic-salary,
+      .take-home-pay {
+        font-weight: bolder;
+        background-color: rgba($color: #73aeb9, $alpha: 0.3) !important;
+        border-radius: 0.5rem;
+        padding-top: 16px;
+        margin: 0 1px 15px;
+      }
+
+      .allowance,
+      .deduction,
+      .benefit {
+        background-color: rgba($color: #d0e8f2, $alpha: 0.4) !important;
+        border-radius: 0.5rem;
+        padding: 16px 15px;
+        margin: 0 1px 15px;
+      }
+    }
+  }
+}
